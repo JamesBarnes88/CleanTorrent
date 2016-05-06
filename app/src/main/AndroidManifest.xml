@@ -17,6 +17,62 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="magnet" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!--props to https://github.com/reemplazable/PushToPulsar for the awesome torrent intent filters-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:pathPattern=".*\\.torrent" android:scheme="http" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\.torrent" android:scheme="http" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.torrent" android:scheme="http" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.torrent" android:scheme="http" android:host="*"/>
+
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:pathPattern=".*\\.torrent" android:scheme="https" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\.torrent" android:scheme="https" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.torrent" android:scheme="https" android:host="*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.torrent" android:scheme="https" android:host="*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/x-bittorrent" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/x-bittorrent" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/x-bittorrent" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:pathPattern=".*\\.torrent" android:scheme="file"/>
+                <data android:pathPattern=".*\\..*\\.torrent" android:scheme="file"/>
+                <data android:pathPattern=".*\\..*\\..*\\.torrent" android:scheme="file"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.torrent" android:scheme="file"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.torrent" android:scheme="file"/>
+            </intent-filter>
+
         </activity>
     </application>
 
